@@ -31,3 +31,4 @@
 /Users/Xander/Desktop/CIDM3312/inClass/MathOperation2/obj/Debug/netcoreapp2.1/MathOperation2.pdb
 /Users/Xander/Desktop/CIDM3312/inClass/MathOperation2/obj/Debug/netcoreapp2.1/MathOperation2.csproj.CopyComplete
 /Users/Xander/Desktop/CIDM3312/inClass/MathOperation2/bin/Debug/netcoreapp2.1/MathLibrary.dll
+/Users/Xander/Desktop/CIDM3312/inClass/MathOperation2/obj/Debug/netcoreapp2.1/Razor/Views/Math/DoCalculations.g.cshtml.cs

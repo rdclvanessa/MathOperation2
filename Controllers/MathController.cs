@@ -12,25 +12,18 @@ namespace MathOperation2.Controllers
 {
     public class MathController : Controller
     {
-        public string Add(decimal LeftOperand, decimal RightOperand)
+        [HttpGet]
+        public IActionResult DoCalculation()
         {
-            //MyMath routines = new MyMath();
-            // decimal value = routines.Add(left, right);
-            return $"{LeftOperand} plus {RightOperand} is: {MyMath.Add(LeftOperand,RightOperand)}";
-        }
-        public string Subtract(decimal up, decimal down)
+            ConverterViewModel model = new ConverterViewModel();
+            return View(model);
+        }  
+        [HttpPost]
+       public IActionResult ShowCalculationResult(ConverterViewModel model)
         {
-            return $"{up} minus {down} is {Decimal.Subtract(up, down)}";
-        }
-
-        public string Mulitply(decimal x, decimal y)
-        {
-            return $"{x} times {y} is {Decimal.Multiply(x, y)}";
-        }
-
-        public string Divide(decimal a, decimal b)
-        {
-            return $"{a} divided by {b} equals {Decimal.Divide(a, b)}";
-        }
+            //the conversion work happens in here
+            model.Result = model.LeftOperand * model.RightOperand;
+            return View(model);
+        }   
     }
 }
